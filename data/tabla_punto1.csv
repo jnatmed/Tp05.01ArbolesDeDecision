@@ -1,0 +1,9 @@
+PRONÓSTICO,TEMPERATURA,HUMEDAD,VIENTO,ASADO,
+Soleado,Calor,Alta,leve,no,
+Soleado,Calor,Alta,fuerte,no,
+Nublado,Calor,Alta,leve,si,
+Lluvioso,templado,Alta,leve,si,
+Lluvioso,Frío,normal,leve,si,
+Lluvioso,Frío,normal,fuerte,no,
+Nublado,Frío,normal,fuerte,si,
+Soleado,templado,Alta,leve,no
