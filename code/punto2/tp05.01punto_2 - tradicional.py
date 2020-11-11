@@ -1,36 +1,22 @@
 import pandas as pd 
 
 # Lee el archivo
-data = pd.read_csv(r'code\punto4\titanic-en.csv')
+data = pd.read_csv("code\punto2\wine.data")
 
-from sklearn import preprocessing
 
-le = preprocessing.LabelEncoder()
-for column_name in data.columns:
-  if (data[column_name].dtype == object) & (column_name!='survived'):
-    data[column_name] = le.fit_transform(data[column_name])
-
-print(data.head())
-
-# Separo "a mano" festures de target
-
-# Features
-feature_names = list(data.columns)
-# Elimino type porque es la clase
-feature_names.remove('survived')
-
+feature_names = ['Alcohol','Malic acid','Ash','AlcalinityOfAsh','Magnesium','TotalPhenols','Flavanoids','NonflavanoidPhenols','Proanthocyanins','ColorIntensity','Hue','OD280_OD315OfDilutedWines','Proline']
 x = data[feature_names]
 
 # Target
-y = data.survived
-le.fit(data['survived'])
-target_names=le.classes_
+y = data.classIdentifier
+print(y)
+
 
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 
 # Separo en 80-20 entrenamiento y testeo
-X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=0, test_size=0.44)
+X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=0, test_size=0.2)
 
 # Creo el objeto Decision Tree classifer
 arbol_tt = tree.DecisionTreeClassifier()
@@ -73,7 +59,7 @@ import pydotplus
 dot_data = StringIO()
 tree.export_graphviz(arbol_parametrizado, out_file=dot_data,
                                 feature_names=feature_names,
-                                class_names=target_names,
+                                class_names=['1','2','3'],
                                 filled=True, rounded=True,
                                 special_characters=True)  
 
@@ -81,4 +67,4 @@ tree.export_graphviz(arbol_parametrizado, out_file=dot_data,
 graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
 
 # Genero png y lo descargo
-graph.write_png(r'code\punto4\arbol_punto4TP05-surv.png')
+graph.write_png(r'code\punto2\arbol_punto2bTP05-tradicional.png')

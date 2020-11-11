@@ -18,6 +18,10 @@ print(data.head())
 feature_names = list(data.columns)
 # Elimino type porque es la clase
 feature_names.remove('type')
+# feature_names.remove('animal')
+# feature_names.remove('airborne')
+# feature_names.remove('hair')
+# feature_names.remove('aquatic')
 
 x = data[feature_names]
 
@@ -55,7 +59,7 @@ predictions = np.array(y_pred)
 
 metrics.confusion_matrix(species, predictions)
 
-arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=7, min_samples_leaf=4)
+arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=4, min_samples_leaf=4)
 
 # Entreno el Decision Tree Classifer con el mismo muestreo generado antes (80-20 %)
 arbol_parametrizado = arbol_parametrizado.fit(X_train,y_train)
@@ -81,4 +85,4 @@ tree.export_graphviz(arbol_parametrizado, out_file=dot_data,
 graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
 
 # Genero png y lo descargo
-graph.write_png(r'code\punto3\arbol_punto3TP05.png')
+graph.write_png(r'code\punto3\arbol_punto3TP05-depth4.png')

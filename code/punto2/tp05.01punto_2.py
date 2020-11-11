@@ -26,6 +26,9 @@ y = data.classIdentifier
 le.fit(data['classIdentifier'])
 target_names=le.classes_
 
+target_names= [str(x) for x in target_names]
+
+
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 
@@ -55,7 +58,7 @@ predictions = np.array(y_pred)
 
 metrics.confusion_matrix(species, predictions)
 
-arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=7, min_samples_leaf=4)
+arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=4, min_samples_leaf=3)
 
 # Entreno el Decision Tree Classifer con el mismo muestreo generado antes (80-20 %)
 arbol_parametrizado = arbol_parametrizado.fit(X_train,y_train)
@@ -73,7 +76,7 @@ import pydotplus
 dot_data = StringIO()
 tree.export_graphviz(arbol_parametrizado, out_file=dot_data,
                                 feature_names=feature_names,
-                                class_names=['1','2','3'],
+                                class_names=target_names,
                                 filled=True, rounded=True,
                                 special_characters=True)  
 

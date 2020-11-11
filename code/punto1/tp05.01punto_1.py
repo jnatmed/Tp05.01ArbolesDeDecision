@@ -12,7 +12,7 @@ for column_name in data.columns:
   if (data[column_name].dtype == object) & (column_name!='ASADO'):
     data[column_name] = le.fit_transform(data[column_name])
 
-print(data.head())
+print(data.head()) 
 
 # Separo "a mano" features de target
 
@@ -47,3 +47,23 @@ tree.export_graphviz(arbol, out_file='tree.dot',
                                 special_characters=True)  
 
 render('dot', 'png', 'tree.dot')
+
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+
+# Separo en 80-20 entrenamiento y testeo
+X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=0, test_size=0.2)
+
+# Creo el objeto Decision Tree classifer
+arbol_tt = tree.DecisionTreeClassifier()
+
+# Entreno el Decision Tree Classifer
+arbol_tt = arbol_tt.fit(X_train,y_train)
+
+#Realizo las predicciones en función del árbol generado
+y_pred = arbol_tt.predict(X_test)
+
+from sklearn import metrics #Importar el módulo metrics de scikit-learn
+
+# Vamos a testear el modelo
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
