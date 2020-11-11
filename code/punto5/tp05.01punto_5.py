@@ -33,7 +33,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import tree
 
 # Separo en 80-20 entrenamiento y testeo
-X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=0, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=0, test_size=0.5)
 
 # Creo el objeto Decision Tree classifer
 arbol_tt = tree.DecisionTreeClassifier()

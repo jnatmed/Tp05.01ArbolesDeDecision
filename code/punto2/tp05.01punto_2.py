@@ -56,7 +56,7 @@ import numpy as np
 species = np.array(y_test)
 predictions = np.array(y_pred)
 
-metrics.confusion_matrix(species, predictions)
+print(metrics.confusion_matrix(species, predictions))
 
 arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=4, min_samples_leaf=3)
 
