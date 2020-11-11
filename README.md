@@ -107,7 +107,7 @@ El recall es la cantidad que el modelo de machine learning sera capaz de clasifi
 
         3. ¿Qué aspectos aborda cada una?
 
-En el ejemplo de los vinos, el Recall nuestro de modelo de machine learning es capaz de identificar 93% de los vinos de clase 1, el 100% de clase 2 y el 100% de los vinos de clase 3. En cuanto a la precision, nos dice que el 100% de los vinos de clase 1 que seran bien clasificados, el 94% para los vinos de clase 2 y el 100% de clase 3.
+En el ejemplo de los vinos, el Recall de nuestro modelo de machine learning, es capaz de identificar 93% de los vinos de clase 1, el 100% de clase 2 y el 100% de los vinos de clase 3. En cuanto a la precision, nos dice que el 100% de los vinos de clase 1 seran bien clasificados, el 94% para los vinos de clase 2 y el 100% de clase 3.
 
     c. Matiz de confusión: ¿En qué casos el modelo clasifica mal?
 
