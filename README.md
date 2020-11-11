@@ -107,7 +107,7 @@ Nos permite saber, que tan bien el modelo predictivo describe a los datos.
 
         2. ¿Cuál es la diferencia entre ambas?
 
-El recall es la cantidad que el modelo de machine learning sera capaz de clasificar y la precision que tan bien seran clasificara el modelo cada tipo de vino.
+El recall es la cantidad que el modelo de machine learning sera capaz de clasificar y la precision es, que tan bien  clasificara el modelo, cada tipo de vino.
 
         3. ¿Qué aspectos aborda cada una?
 
