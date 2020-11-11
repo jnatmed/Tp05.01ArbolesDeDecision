@@ -63,10 +63,12 @@ Conclusion: Con un 56% de datos de entrenamiento, y 44% de prueba, se obtiene un
 a. Realice las tareas necesarias para poder procesar el dataset en Scikit-Learn.
 
 Fue necesario cambiar los tipos de datos a string
-´´´
+
+```
 data['balance'] = data['balance'].astype('string')
 data['pdays'] = data['pdays'].astype('string')
-´´´
+```
+
 Con visual-studio reemplace los ";" por ","
 
 y la fila de "target names" le tuve que sacar la comillas dobles
@@ -111,10 +113,11 @@ En el ejemplo de los vinos, el Recall de nuestro modelo de machine learning, es 
 
     c. Matiz de confusión: ¿En qué casos el modelo clasifica mal?
 
-    Esta es la matriz del modelo para el data set wine.
+Esta es la matriz del modelo para el data set wine.
 
-        [[14  0  0]
-        [ 1 15  0]
-        [ 0  0  6]]
-
-    Esto nos dice que de los 15 clases de vino tipo 1, solo 1 la clasifico como tipo 2.
+```
+    [[14  0  0]
+    [ 1 15  0]
+    [ 0  0  6]]
+```
+Esto nos dice que de los 15 clases de vino tipo 1, solo 1 la clasifico como tipo 2.
