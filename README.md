@@ -99,7 +99,7 @@ Nos permite saber, que tan bien el modelo predictivo describe a los datos.
     b. Recall/Precision.
         1. Ahora, sobre el mismo modelo de a), calcule las métricas recall y precisión para ambos modelos.
 
-    ![calculo Recall y Precision punto 2 - Wine](code/medidas-evaluacion/recall-precision.png)
+![calculo Recall y Precision punto 2 - Wine](code/medidas-evaluacion/recall-precision.png)
 
         2. ¿Cuál es la diferencia entre ambas?
 
