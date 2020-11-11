@@ -41,9 +41,9 @@ a. Genere el árbol de decisión que permita inferir el tipo de animal en funci�
 - el arbol generado posee 6 niveles (contando la raiz)
 - para lograr podar el arbol, se tiene que modificar el atributo "max_depth=4"
 
-´´´
+```
 arbol_parametrizado = tree.DecisionTreeClassifier(criterion="entropy", max_depth=4, min_samples_leaf=4)
-´´´
+```
 
 Baja la eficiencia de un 95% a un 90%
 
