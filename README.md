@@ -12,7 +12,8 @@ a. Utilice el metadata que provee la librería, ¿Cuál es el tema que aborda el
 
 Respuesta: El dataset usa el analisis quimico para determinar el origen de los vinos
 haciendo un import del dataset se puede observar su descripcion completa
-![descripcion_dataset_wine](code/punto2/descripcion_wine.txt)
+
+[descripcion_dataset_wine](code/punto2/descripcion_wine.txt)
 
 b. Genere el árbol de decisión que permita clasificar los diferentes tipos de vino utilizando un muestreo con proporciones de 80% para entrenamiento y 20% para testeo.
 
