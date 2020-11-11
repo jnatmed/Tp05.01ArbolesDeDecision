@@ -21,12 +21,13 @@ b. Genere el árbol de decisión que permita clasificar los diferentes tipos de 
 
 c. Explore la solución dada y las posibles configuraciones para obtener un nuevo árbol que clasifique “mejor”. Documente las conclusiones.
 
+```
 Accuracy : 
 70 train/ 30 test => 93% precision
 80 train/ 20 test => 94% precision
 90 train/ 10 test => 100% orecision
-
-Al parecer una configuracion de 90 train/ 10 test => 100% precision clasifica de forma optima el arbol. Sin embargo esto es obvio al disminuir el conjunto de prueba, es decir, si la cantidad de pruebas disminuye es mucho mas probable que los pocos testeos que hagan sean acertados, en cambio cuantas mas pruebas se hagan, es mas probable que se provoquen fallas. Luego a medida que aumentamos el conjunto de prueba se logra un punto maximo de precision del 94% precision con un conjunto de 80% train y 20% de test.
+```
+Se puede deducir que una configuracion de 90 train/ 10 test => 100% precision clasifica de forma optima el arbol. Sin embargo esto es obvio al disminuir el conjunto de prueba, es decir, si la cantidad de pruebas disminuye es mucho mas probable que los pocos testeos que hagan sean acertados, en cambio cuantas mas pruebas se hagan, es mas probable que se provoquen fallas. Luego a medida que aumentamos el conjunto de prueba se logra un punto maximo de precision del 94% precision con un conjunto de 80% train y 20% de test.
 
 ### 3. Ahora, analice el archivo zoo.csv2:
 a. Genere el árbol de decisión que permita inferir el tipo de animal en función de sus características. Explique someramente que resultado se obtiene en términos del árbol y en términos de la eficiencia del mismo.
